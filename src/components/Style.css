@@ -5,3 +5,11 @@
   background-size: cover;
   background-image: url('images/w-atmosphere-bg.jpg');
 }
+
+.jumbo {
+  padding: 10em;
+}
+
+.styleImg{
+  height:100px;
+}
