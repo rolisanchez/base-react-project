@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const baseUrl = `https://datalab-tf-img-styletrans.herokuapp.com`;
 
-export function getStyleImage() {
+export function getStyleImage(checkpoint, file) {
 
   // If needed you can add your own parameters here
   var url = `${baseUrl}`;

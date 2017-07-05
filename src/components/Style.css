@@ -1,15 +1,14 @@
-.styleTransfer {
-  height: 100%;
+.style-transfer-bg {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  background-image: url('images/w-atmosphere-bg.jpg');
+  background-color: #8FBC8F;
 }
 
 .jumbo {
-  padding: 10em;
+  padding: 5em;
 }
 
-.styleImg{
+.style-img{
   height:100px;
 }

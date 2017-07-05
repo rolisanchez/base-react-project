@@ -5,7 +5,9 @@ import {
     Container, Row, Col
 } from 'reactstrap';
 
+import StyleForm from 'components/StyleForm.jsx';
 import './Style.css';
+import {getStyleImage} from 'api/get-style-image.js';
 
 export default class Style extends React.Component {
 
@@ -22,7 +24,7 @@ export default class Style extends React.Component {
 
     render() {
         return (
-            <div className={`styleTransfer`}>
+            <div className={`style-transfer-bg`}>
                 <div className={`jumbo`}>
                   <Jumbotron>
                     <h1 className="display-3">Style Transfer React</h1>
@@ -34,38 +36,44 @@ export default class Style extends React.Component {
                     <Container>
                             <Row>
                               <Col>
-                                <img className="styleImg" src="images/styles/la_muse.jpg" />
+                                <img className="style-img" src="images/styles/la_muse.jpg" />
                                 <p class="text-center">A Muse <br /> Pablo Picasso</p>
                               </Col>
                               <Col>
-                                <img className="styleImg" src="images/styles/rain_princess.jpg"  />
+                                <img className="style-img" src="images/styles/rain_princess.jpg"  />
                                 <p class="text-center">Rain Princess<br />Leonid Afremov</p>
                               </Col>
                               <Col>
-                                <img className="styleImg" src="images/styles/the_scream.jpg"  />
+                                <img className="style-img" src="images/styles/the_scream.jpg"  />
                                 <p class="text-center">The Scream<br />Edvard Munch</p>
                               </Col>
                             </Row>
 
                             <Row>
                               <Col>
-                                <img className="styleImg" src="images/styles/udnie.jpg"  />
+                                <img className="style-img" src="images/styles/udnie.jpg"  />
                                 <p class="text-center">Udnie<br />Francis Picabia</p>
                               </Col>
                               <Col>
-                                <img className="styleImg" src="images/styles/wave.jpg"  />
+                                <img className="style-img" src="images/styles/wave.jpg"  />
                                 <p class="text-center">The Great Wave off Kanagawa <br />Katsushika Hokusai</p>
                               </Col>
                               <Col>
-                                <img className="styleImg" src="images/styles/wreck.jpg"  />
+                                <img className="style-img" src="images/styles/wreck.jpg"  />
                                 <p class="text-center">The Shipwreck of the Minotaur<br />J. M. W. Turner</p>
                               </Col>
                             </Row>
                     </Container>
+                    <hr className="my-2" />
+                    <StyleForm onQuery={this.handleFormQuery}/>
 
                   </Jumbotron>
                 </div>
             </div>
         );
     }
+
+    handleFormQuery(checkpoint, file) {
+      this.getStyleImage(checkpoint, file);
+  }
 }
