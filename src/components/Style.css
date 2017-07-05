@@ -1,0 +1,7 @@
+.styleTransfer {
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-image: url('images/w-atmosphere-bg.jpg');
+}
